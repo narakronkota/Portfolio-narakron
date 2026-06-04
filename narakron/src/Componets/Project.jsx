@@ -64,8 +64,8 @@ const projects = [
     ],
     image:
       "https://res.cloudinary.com/dyiksnmcb/image/upload/v1780501313/Screenshot_2026-06-03_223502_jxe6wf.png",
-    link: "#",
-    github: "https://github.com/your-repo-3",
+    link: "#https://portfolio-narakron-qflq.vercel.app",
+    github: "https://github.com/narakronkota/Portfolio-narakron",
   },
 ];
 
