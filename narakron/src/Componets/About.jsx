@@ -1,8 +1,8 @@
 import React from "react";
 import { Code, GraduationCap, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
+ 
 
-// ✅ Animation Variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -68,7 +68,7 @@ const About = () => {
           variants={container}
           viewport={{ once: true }}
         >
-          {/* Languages */}
+
           <motion.div
             variants={item}
             className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:bg-white hover:border-black hover:-translate-y-1 hover:shadow-xl group"
@@ -84,7 +84,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Education */}
+
           <motion.div
             variants={item}
             className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:bg-white hover:border-black hover:-translate-y-1 hover:shadow-xl group"
@@ -100,7 +100,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Projects */}
+
           <motion.div
             variants={item}
             className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center transition-all duration-300 hover:bg-white hover:border-black hover:-translate-y-1 hover:shadow-xl group"
@@ -117,7 +117,6 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        
         <motion.div
           className="w-full text-center"
           initial="hidden"

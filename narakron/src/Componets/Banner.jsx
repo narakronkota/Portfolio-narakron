@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
-// ✅ แก้ไขจุดที่ 1: เพิ่ม AnimatePresence เข้ามาในบรรทัดนี้
+
 import { motion, AnimatePresence } from "framer-motion";
-// ✅ แก้ไขจุดที่ 2: เพิ่ม FaTimes สำหรับไอคอนปุ่มกากบาทปิดโมดอล
+
 import { FaGithub, FaTimes } from "react-icons/fa";
 
 function Banner() {
-  const words = useMemo(() => ["Frontend", "Full-Stack"], []);
-
+  
   const [currentWord, setCurrentWord] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -14,12 +13,13 @@ function Banner() {
   const [isReady, setIsReady] = useState(false);
 
   const [isOpenResume, setIsOpenResume] = useState(false);
+  const words = useMemo(() => ["Frontend", "Full-Stack"], []);
 
   useEffect(() => {
     const startTimer = setTimeout(() => setIsReady(true), 1000);
     return () => clearTimeout(startTimer);
   }, []);
-
+  
   useEffect(() => {
     if (!isReady) return;
 
@@ -28,14 +28,18 @@ function Banner() {
 
     const timeout = setTimeout(() => {
       if (!isDeleting && charIndex < current.length) {
+        
         setCurrentWord(current.slice(0, charIndex + 1));
         setCharIndex(charIndex + 1);
       } else if (isDeleting && charIndex > 0) {
+     
         setCurrentWord(current.slice(0, charIndex - 1));
         setCharIndex(charIndex - 1);
       } else if (!isDeleting && charIndex === current.length) {
+        
         setTimeout(() => setIsDeleting(true), 1000);
       } else if (isDeleting && charIndex === 0) {
+        
         setIsDeleting(false);
         setWordIndex((wordIndex + 1) % words.length);
       }
@@ -60,10 +64,6 @@ function Banner() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         ></motion.div>
 
-        {/* Greeting */}
-        
-
-       
         {/* Title */}
         <motion.h1
           className="text-5xl md:text-6xl font-serif font-semibold text-gray-900 dark:text-white dark:text-white leading-tight mb-6"

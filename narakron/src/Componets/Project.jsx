@@ -59,7 +59,6 @@ const projects = [
       "Framer Motion",
       "Responsive Design",
       "Lucide Icons",
-      "Cloudinary",
       "Vercel",
     ],
     image:
@@ -88,7 +87,7 @@ const Projects = () => {
           </h1>
           <div className="w-12 h-[2px] bg-black mx-auto mt-4"></div>
         </motion.div>
-     
+
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
           {projects.map((project, index) => (
             <motion.div
@@ -103,7 +102,6 @@ const Projects = () => {
                 ease: "easeOut",
               }}
             >
-      
               <div className="w-full h-48 overflow-hidden">
                 <img
                   src={project.image}
@@ -112,7 +110,6 @@ const Projects = () => {
                 />
               </div>
 
-        
               <div className="p-6 flex flex-col flex-grow justify-between">
                 <div>
                   {/* Subtitle + GitHub */}
@@ -130,11 +127,10 @@ const Projects = () => {
                     </a>
                   </div>
 
-                  <h3 className="text-xl font-thai text-gray-900 dark:text-white mt-1 min-h-[56px] line-clamp-2">
+                  <h3 className="text-xl text-gray-900 dark:text-white mt-1 min-h-[56px] line-clamp-2">
                     {project.title}
                   </h3>
 
- 
                   <div className="flex flex-wrap gap-2 mt-3 min-h-[110px] content-start">
                     {project.tags.map((tag, i) => (
                       <span
@@ -146,13 +142,11 @@ const Projects = () => {
                     ))}
                   </div>
 
-
                   <p className="text-gray-600 font-thai text-sm mt-4 line-clamp-4">
                     {project.description}
                   </p>
                 </div>
 
-  
                 <div className="mt-6">
                   <a
                     href={project.link}

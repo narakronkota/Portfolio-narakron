@@ -94,7 +94,7 @@ export default function Experience() {
           <div className="w-12 h-[2px] bg-black mx-auto mt-4"></div>
         </motion.div>
 
-        {/* Two cards (ปรับ layout ระยะห่างและขอบให้เข้ากับสไตล์ขาวดำคลีนๆ) */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <Card title="Frontend Development" items={frontend} />
           <Card title="Backend Development" items={backend} />

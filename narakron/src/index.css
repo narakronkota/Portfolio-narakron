@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
 
+
+
+
 @import "tailwindcss";
+
 
 @theme {
   --font-thai: "Kanit", sans-serif;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 
 html {
   scroll-behavior: smooth;
+
 }
+
 .typing-cursor {
   display: inline-block;
   width: 2px;
