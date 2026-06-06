@@ -6,12 +6,17 @@
 @import "tailwindcss";
 
 
+@variant dark (&:not(*));
+
+
 @theme {
   --font-thai: "Kanit", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+
+  color-scheme: light;
 
 }
 
