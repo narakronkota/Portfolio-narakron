@@ -22,7 +22,7 @@ const projects = [
     ],
     link: "https://staff-management-system-omega.vercel.app",
     image:
-      "https://res.cloudinary.com/dyiksnmcb/image/upload/v1780501313/Screenshot_2026-06-03_223541_ducnw7.png",
+      "https://res.cloudinary.com/dyiksnmcb/image/upload/v1780830620/Screenshot_2026-06-07_180940_aede7w.png",
     github: "https://github.com/narakronkota/emolyee-contact",
   },
   {
@@ -63,7 +63,7 @@ const projects = [
       "Vercel",
     ],
     image:
-      "https://res.cloudinary.com/dyiksnmcb/image/upload/v1780501313/Screenshot_2026-06-03_223502_jxe6wf.png",
+      "https://res.cloudinary.com/dyiksnmcb/image/upload/v1780830871/Screenshot_2026-06-07_181419_wwdmds.png",
     link: "#https://portfolio-narakron-qflq.vercel.app",
     github: "https://github.com/narakronkota/Portfolio-narakron",
   },

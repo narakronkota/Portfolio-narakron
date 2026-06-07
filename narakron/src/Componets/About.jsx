@@ -112,7 +112,7 @@ const About = () => {
               Projects
             </h3>
             <p className="text-gray-500 font-thai text-xs leading-relaxed">
-              พัฒนาโปรเจกต์ส่วนตัวและใช้งานจริงมากกว่า 3 ผลงาน
+              พัฒนาโปรเจกต์ของตัวเองเรียนรู้จาก youtube จนใช้งานจริง 3 ผลงาน
             </p>
           </motion.div>
         </motion.div>

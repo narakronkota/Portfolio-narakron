@@ -60,24 +60,32 @@ export default function Experience() {
   const frontend = [
     { name: "HTML", level: "Experienced" },
     { name: "CSS", level: "Experienced" },
-    { name: "JavaScript", level: "Intermediate" },
+    { name: "JavaScript", level: "In Progress" },
+    { name: "TypeScript", level: "In Progress" },
     { name: "React.js", level: "Intermediate" },
-    { name: "Next.js", level: "Intermediate" },
+    { name: "Next.js", level: "In Progress" },
     { name: "TailwindCSS", level: "Intermediate" },
   ];
 
   const backend = [
-    { name: "Node.js", level: "Intermediate" },
-    { name: "Express.js", level: "Intermediate" },
-    { name: "MongoDB", level: "Intermediate" },
-    { name: "MySQL", level: "Basic" },
-    { name: "PostgreSQL", level: "Basic" },
-    { name: "Git", level: "Intermediate" },
+    { name: "Node.js", level: "In Progress" },
+    { name: "Express.js", level: "In Progress" },
+    { name: "REST API", level: "In Progress" },
+    { name: "MongoDB", level: "Exploring" },
+    { name: "MySQL", level: "Exploring" },
+    { name: "PostgreSQL", level: "Exploring" },
+  ];
+  
+  const toolsAndCloud = [
+    { name: "Git / GitHub", level: "Exploring" },
+    { name: "JWT Auth", level: "Exploring" },
+    { name: "Cloudinary", level: "Learning" },
+    { name: "Vercel", level: "In Progress" }, 
   ];
 
   return (
     <section className="w-full py-24 px-4 sm:px-6 bg-white text-black select-none">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -95,9 +103,11 @@ export default function Experience() {
         </motion.div>
 
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           <Card title="Frontend Development" items={frontend} />
           <Card title="Backend Development" items={backend} />
+          
+          <Card title="Tools & Cloud Services" items={toolsAndCloud} />
         </div>
       </div>
     </section>

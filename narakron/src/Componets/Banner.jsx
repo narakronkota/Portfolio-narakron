@@ -80,7 +80,7 @@ function Banner() {
 
         {/* Description */}
         <motion.p
-          className="text-gray-600 dark:text-white text-md max-w-2xl mx-auto mb-8"
+          className="text-gray-600 font-thai text-md max-w-2xl mx-auto mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -107,7 +107,7 @@ function Banner() {
 
           <button
             onClick={() => setIsOpenResume(true)}
-            className="flex items-center border border-gray-300 text-gray-800 px-6 py-3 rounded-full text-lg dark:text-white hover:bg-gray-50 transition-colors duration-300 cursor-pointer"
+            className="flex items-center border border-gray-300 text-gray-800 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-50 transition-colors duration-300 cursor-pointer"
           >
             My Resume <span className="ml-2">↓</span>
           </button>
