@@ -123,11 +123,13 @@ const Projects = () => {
                   />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow justify-between">
-                  <div>
-                    {/* Subtitle + GitHub */}
-                    <div className="flex justify-between items-center">
-                      <p className="text-sm text-gray-500 truncate mr-2">
+                {/* เปลี่ยน p-6 เป็น p-5 เพื่อให้ขอบสวยขึ้น และคุมทุกอย่างในนี้ */}
+                <div className="p-5 flex flex-col flex-grow justify-between w-full">
+                  {/* กล่องคลุมเนื้อหาทั้งหมด: บังคับไอเทมชิดซ้าย (items-start) และข้อความชิดซ้าย (text-left) */}
+                  <div className="flex flex-col items-start text-left w-full">
+                    {/* 1. Subtitle + GitHub */}
+                    <div className="flex justify-between items-center w-full">
+                      <p className="text-sm text-gray-500 truncate mr-2 text-left">
                         {project.subtitle}
                       </p>
                       <a
@@ -140,25 +142,26 @@ const Projects = () => {
                       </a>
                     </div>
 
-                    <h3 className="text-xl text-gray-900 dark:text-white mt-1 min-h-[56px] line-clamp-2">
+                    {/* 2. Title */}
+                    <h3 className="text-xl text-gray-900 dark:text-white mt-1 w-full font-semibold text-left">
                       {project.title}
                     </h3>
 
-                    <div className="flex flex-wrap gap-2 mt-3 min-h-[110px] content-start">
+                    <div className="flex flex-wrap gap-1.5 mt-2.5 w-full justify-start items-start -ml-1.5 ">
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="text-xs px-3 py-1 bg-gray-100 text-gray-700 font-thai rounded-full"
+                          className="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 font-semibold rounded-full inline-block whitespace-nowrap"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    
-                    <div className="mt-4">
+                    {/* 4. Description (จุดที่แก้): บังคับ w-full และ text-left ที่ตัว <p> โดยตรง */}
+                    <div className="mt-4 w-full text-left">
                       <p
-                        className={`text-gray-600 font-thai text-sm transition-all duration-300 ${
+                        className={`text-gray-600 font-thai text-sm text-left leading-relaxed mb-1.5 transition-all duration-300 ${
                           isExpanded ? "" : "line-clamp-4"
                         }`}
                       >
@@ -168,20 +171,21 @@ const Projects = () => {
                       {project.description.length > 150 && (
                         <button
                           onClick={() => toggleExpand(project.id)}
-                          className="text-xs font-thai text-gray-800 hover:text-black mt-1 underline block focus:outline-none"
+                          className="text-xs font-thai text-gray-800 hover:text-black mt-1.5 underline block focus:outline-none text-left cursor-pointer"
                         >
-                          {isExpanded ? "" : "... อ่านเพิ่มเติม"}
+                          {isExpanded ? "ซ่อนเนื้อหา" : "... อ่านเพิ่มเติม"}
                         </button>
                       )}
                     </div>
                   </div>
 
-                  <div className="mt-6">
+                  {/* ปุ่ม View Project ด้านล่างสุด */}
+                  <div className="mt-6 w-full">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-6 block w-full text-center py-3 border border-gray-200 text-gray-800 text-sm font-semibold rounded-xl hover:bg-gray-800 hover:text-white hover:border-black transition duration-200"
+                      className="block w-full text-center py-3 border border-gray-200 text-gray-800 text-sm font-semibold rounded-xl hover:bg-gray-800 hover:text-white hover:border-black transition duration-200"
                     >
                       View Project →
                     </a>
