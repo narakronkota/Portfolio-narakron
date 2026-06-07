@@ -1,14 +1,32 @@
 import React from "react";
-import { BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiGit,
+  SiGithub,
+  SiCloudinary,
+  SiVercel,
+} from "react-icons/si";
+import { HiOutlineCodeBracket } from "react-icons/hi2";
+import { MdVerifiedUser } from "react-icons/md";
 
-// Item component with animation
-const Item = ({ name, level }) => (
+
+const Item = ({ name, level, icon }) => (
   <motion.div
     className="
       flex flex-col items-center text-center
       sm:flex-row sm:items-start sm:text-left
-      gap-2 sm:gap-3
+      gap-2 sm:gap-4
       w-full
     "
     initial={{ opacity: 0, x: -30 }}
@@ -16,17 +34,16 @@ const Item = ({ name, level }) => (
     transition={{ duration: 0.5 }}
     viewport={{ once: true }}
   >
-    <BadgeCheck className="h-5 w-5 shrink-0 text-gray-800" strokeWidth={1.75} />
+    <div className="text-2xl shrink-0 sm:mt-0.5">{icon}</div>
 
     <div>
       <p className="font-semibold text-gray-900">{name}</p>
-
-      <p className="text-sm text-gray-500">{level}</p>
+      <p className="text-sm text-gray-500 mt-0.5">{level}</p>
     </div>
   </motion.div>
 );
 
-// Card component with animation
+// Card component
 const Card = ({ title, items }) => (
   <motion.div
     className="
@@ -48,39 +65,40 @@ const Card = ({ title, items }) => (
       {title}
     </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
       {items.map((it, idx) => (
-        <Item key={idx} name={it.name} level={it.level} />
+        <Item key={idx} name={it.name} level={it.level} icon={it.icon} />
       ))}
     </div>
   </motion.div>
 );
 
 export default function Experience() {
+  
   const frontend = [
-    { name: "HTML", level: "Experienced" },
-    { name: "CSS", level: "Experienced" },
-    { name: "JavaScript", level: "In Progress" },
-    { name: "TypeScript", level: "In Progress" },
-    { name: "React.js", level: "Intermediate" },
-    { name: "Next.js", level: "In Progress" },
-    { name: "TailwindCSS", level: "Intermediate" },
+    { name: "HTML", level: "Experienced", icon: <FaHtml5 className="text-black" /> },
+    { name: "CSS", level: "Experienced", icon: <FaCss3Alt className="text-black" /> },
+    { name: "JavaScript", level: "In Progress", icon: <SiJavascript className="text-black rounded" /> },
+    { name: "TypeScript", level: "In Progress", icon: <SiTypescript className="text-black" /> },
+    { name: "React.js", level: "Intermediate", icon: <SiReact className="text-black" /> },
+    { name: "Next.js", level: "In Progress", icon: <SiNextdotjs className="text-black dark:text-white" /> },
+    { name: "TailwindCSS", level: "Intermediate", icon: <SiTailwindcss className="text-black" /> },
   ];
 
   const backend = [
-    { name: "Node.js", level: "In Progress" },
-    { name: "Express.js", level: "In Progress" },
-    { name: "REST API", level: "In Progress" },
-    { name: "MongoDB", level: "Exploring" },
-    { name: "MySQL", level: "Exploring" },
-    { name: "PostgreSQL", level: "Exploring" },
+    { name: "Node.js", level: "In Progress", icon: <SiNodedotjs className="text-black" /> },
+    { name: "Express.js", level: "In Progress", icon: <SiExpress className="text-black dark:text-white" /> },
+    { name: "REST API", level: "In Progress", icon: <HiOutlineCodeBracket className="text-black" /> },
+    { name: "MongoDB", level: "Exploring", icon: <SiMongodb className="text-black" /> },
+    { name: "MySQL", level: "Exploring", icon: <SiMysql className="text-black" /> },
+    { name: "PostgreSQL", level: "Exploring", icon: <SiPostgresql className="text-black" /> },
   ];
-  
+
   const toolsAndCloud = [
-    { name: "Git / GitHub", level: "Exploring" },
-    { name: "JWT Auth", level: "Exploring" },
-    { name: "Cloudinary", level: "Learning" },
-    { name: "Vercel", level: "In Progress" }, 
+    { name: "Git / GitHub", level: "Exploring", icon: <SiGithub className="text-black dark:text-white" /> },
+    { name: "JWT Auth", level: "Exploring", icon: <MdVerifiedUser className="text-black" /> },
+    { name: "Cloudinary", level: "Learning", icon: <SiCloudinary className="text-black" /> },
+    { name: "Vercel", level: "In Progress", icon: <SiVercel className="text-black dark:text-white" /> }, 
   ];
 
   return (
@@ -102,11 +120,9 @@ export default function Experience() {
           <div className="w-12 h-[2px] bg-black mx-auto mt-4"></div>
         </motion.div>
 
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-start">
           <Card title="Frontend Development" items={frontend} />
           <Card title="Backend Development" items={backend} />
-          
           <Card title="Tools & Cloud Services" items={toolsAndCloud} />
         </div>
       </div>

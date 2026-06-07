@@ -123,9 +123,9 @@ const Projects = () => {
                   />
                 </div>
 
-                {/* เปลี่ยน p-6 เป็น p-5 เพื่อให้ขอบสวยขึ้น และคุมทุกอย่างในนี้ */}
+                
                 <div className="p-5 flex flex-col flex-grow justify-between w-full">
-                  {/* กล่องคลุมเนื้อหาทั้งหมด: บังคับไอเทมชิดซ้าย (items-start) และข้อความชิดซ้าย (text-left) */}
+                  
                   <div className="flex flex-col items-start text-left w-full">
                     {/* 1. Subtitle + GitHub */}
                     <div className="flex justify-between items-center w-full">
@@ -142,7 +142,7 @@ const Projects = () => {
                       </a>
                     </div>
 
-                    {/* 2. Title */}
+                   
                     <h3 className="text-xl text-gray-900 dark:text-white mt-1 w-full font-semibold text-left">
                       {project.title}
                     </h3>
@@ -158,7 +158,7 @@ const Projects = () => {
                       ))}
                     </div>
 
-                    {/* 4. Description (จุดที่แก้): บังคับ w-full และ text-left ที่ตัว <p> โดยตรง */}
+                    
                     <div className="mt-4 w-full text-left">
                       <p
                         className={`text-gray-600 font-thai text-sm text-left leading-relaxed mb-1.5 transition-all duration-300 ${
@@ -179,7 +179,7 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* ปุ่ม View Project ด้านล่างสุด */}
+                  
                   <div className="mt-6 w-full">
                     <a
                       href={project.link}
